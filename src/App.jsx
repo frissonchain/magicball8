@@ -32,12 +32,14 @@ export default function App() {
       <h1 className="text-4xl font-bold mb-6">Давай задавай юный криптан</h1>
 
       <input
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
-        placeholder=""
-        className="w-full max-w-md p-4 rounded-xl text-black bg-white/80"
-      />
-
+  value={question}
+  onChange={(e) => setQuestion(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter') handleAsk();
+  }}
+  placeholder=""
+  className="w-full max-w-md p-4 rounded-xl text-black bg-white/80"
+/>
       <button
         onClick={handleAsk}
         disabled={loading}
