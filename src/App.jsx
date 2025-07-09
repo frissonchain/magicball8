@@ -29,7 +29,7 @@ export default function App() {
         backgroundPosition: 'center center',
       }}
     >
-      <h1 className="text-4xl font-bold mb-6">Ask your question</h1>
+      <h1 className="text-4xl font-bold mb-6">Давай задавай юный криптан</h1>
 
       <input
         value={question}
