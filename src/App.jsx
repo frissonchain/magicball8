@@ -48,7 +48,7 @@ export default function App() {
         disabled={loading}
         className="mt-4 bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-xl shadow-lg disabled:opacity-50"
       >
-        {loading ? 'Шар вибрирует...' : 'хоть бы сто иксов'}
+        {loading ? 'Шар вибрирует...' : 'Хоть бы сто иксов'}
       </button>
 
       {answer && (
