@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <main
-      className="flex flex-col items-center justify-center min-h-screen p-4 text-white"
+      className="flex flex-col items-center justify-center min-h-screen p-4 text-white relative"
       style={{
         backgroundImage: 'url(/magicball-bg.jpeg)',
         backgroundSize: 'cover',
@@ -48,7 +48,7 @@ export default function App() {
         disabled={loading}
         className="mt-4 bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-xl shadow-lg disabled:opacity-50"
       >
-        {loading ? 'Шар вибрирует...' : 'Хоть бы сто иксов'}
+        {loading ? 'Шар вибрирует...' : 'хоть бы сто иксов'}
       </button>
 
       {answer && (
@@ -56,6 +56,25 @@ export default function App() {
           {answer}
         </p>
       )}
+
+      <footer className="absolute bottom-4 text-xs text-white/70 flex gap-4">
+        <a
+          href="https://coinmarketcap.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline hover:text-white transition"
+        >
+          NFA DYOR
+        </a>
+        <a
+          href="https://farcaster.xyz/frissonchain.eth"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline hover:text-white transition"
+        >
+          /frissonchain
+        </a>
+      </footer>
     </main>
   );
 }
