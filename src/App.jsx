@@ -21,35 +21,35 @@ export default function App() {
 
   return (
     <main
-      className="flex flex-col items-center justify-center min-h-screen bg-black text-white relative"
+      className="flex flex-col items-center justify-center min-h-screen p-4 text-white bg-black"
       style={{
-        backgroundImage: 'url(/magicball-bg.png)',
+        backgroundImage: 'url(/magicball-bg.png)', // ← сюда положи свой PNG-файл
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}
     >
-      <h1 className="text-3xl font-bold mb-8">Ask your question</h1>
+      <h1 className="text-4xl font-bold mb-6">Ask your question</h1>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 mt-12">
-        <input
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-black/80 border border-white text-white w-64 text-center outline-none"
-        />
-        <button
-          onClick={handleAsk}
-          disabled={loading}
-          className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-xl shadow-lg disabled:opacity-50"
-        >
-          {loading ? 'Thinking...' : 'Ask'}
-        </button>
-      </div>
+      <input
+        value={question}
+        onChange={(e) => setQuestion(e.target.value)}
+        placeholder=""
+        className="w-full max-w-md p-4 rounded-xl text-black bg-white/80"
+      />
+
+      <button
+        onClick={handleAsk}
+        disabled={loading}
+        className="mt-4 bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-xl shadow-lg"
+      >
+        {loading ? 'Thinking...' : 'Ask'}
+      </button>
 
       {answer && (
-        <div className="absolute bottom-12 text-xl text-center max-w-xl bg-black/70 p-4 rounded-xl">
+        <p className="mt-8 text-xl text-center max-w-xl bg-black/70 p-4 rounded-xl">
           {answer}
-        </div>
+        </p>
       )}
     </main>
   );
