@@ -21,12 +21,12 @@ export default function App() {
 
   return (
     <main
-      className="flex flex-col items-center justify-center min-h-screen p-4 text-white bg-black"
+      className="flex flex-col items-center justify-center min-h-screen p-4 text-white"
       style={{
-        backgroundImage: 'url(/magicball-bg.png)', // ← сюда положи свой PNG-файл
-        backgroundSize: 'contain',
+        backgroundImage: 'url(/magicball-bg.jpeg)', // ← использует твоё новое изображение
+        backgroundSize: 'cover',                     // ← растягивает на весь экран
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center center',
       }}
     >
       <h1 className="text-4xl font-bold mb-6">Ask your question</h1>
